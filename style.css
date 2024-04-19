@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* OS ITENS (FORA CONTAINER E CAIXAS) SE INICIA COM display...*/
+
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --strock-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.2);
+  --high-light-color: rgba(255, 255, 255, 0.2);
+  --switch-bg: url(./assets/moon-stars.svg);
+}
+
+.dia {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --strock-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.05);
+  --high-light-color: rgba(0, 0, 0, 0.2);
+  --switch-bg: url(./assets/sun.svg);
+}
+
+body {
+  /*
+  background-image: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  AGRUPEI TODAS AS TAGS ACIMA EM UMA SÓ
+  */
+
+  /*backgroun: color image repeat position zie*/
+
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+/* SEMPRRE QUE INICIAR A ESTILIZAÇÃO DE UMA DIV, COMEÇA COM #NOME DA DIZ (ESPAÇO) E A TAG DENTRO DA DIV EX: button
+
+EX DO ENSINAMENTO: HTML <div id=Batata>img....</div>
+NO CSS FICA #batata img {} 
+
+-----------------------------------------------------------------
+
+LEMBRANDO QUE EXISTE VÁRIOS TIPOS DE FORMAS DE ALINHAR ELEMENTOS NO CSS, VOU LISTAR ALGUMAS DO MAIS EASY P O MAIS HARD:
+1- TEXTO; TEXT-ALIGTH: CENTER
+2- LISTA; DISPLAY: FLEX OR BLOCK; TEXT-ALIGHT; JUSTIFY-CONTENT; AJUSTAR OS PADDING E MARGIN*
+3- SWITCH: TEM ESTRATEGIA DE DISPLAY BLOCK NA PRIMEIRA TAG E NA TAG NOMEADA USAR UM: POSITION: RELATIVE; PARA AJUSTAR LARGURA FIXA E DEPOS AUTOMATIZAR AS LATERAIS OS COD: POSITION: RELATIVE; POSITION: ABSOLUTE; TOP. BOTTOM. RIGH OR LEFT: 0 OR (NUM QUALQUR) */
+
+#container-1 {
+  width: 360px;
+  margin: 56px auto 0px;
+  padding: 24px;
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+  border-radius: 50%;
+}
+
+#switch {
+
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.dia #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--strock-color);
+  -webkit-background-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/*caixas de link*/
+
+#ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px, 0px;
+}
+
+/*ALIGHT (alinhar) e JUSTIFICAR (Alinhar horizontal)*/
+
+ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px;
+
+  padding: 16px 24px;
+
+  background: var(--surface-color);
+  border: 1px solid var(--strock-color);
+  border-radius: 8px;
+
+  backdrop-filter: blur;
+
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+/* o :hover é para uma nova atuação do botão ao passar em cima*/
+
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1px white;
+}
+
+li {
+  list-style: none;
+}
+
+/*para selecionar ultilizar a tag ou o NOME DADO ex: link sociais (tag; gap é a distancia entre icons) */
+
+#link-sociais {
+  display: flex;
+  justify-content: center;
+
+  padding: 24px 0px;
+  font-size: 24px;
+}
+
+#link-sociais a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+
+  transition: 0.2s;
+  border-radius: 50%;
+}
+
+#link-sociais a:hover {
+  background-color: var(--high-light-color);
+}
+
+#produzido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+
+  padding: 24px 0px;
+}
