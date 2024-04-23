@@ -19,7 +19,7 @@ Projeto feito com base na Rocketseat sendo o meu primeiro projeto de vários que
 <br>
 
 <p align="center">
-  <img alt="projeto FistGM" src=".github/Fundo.png" width="100%">
+  <img alt="projeto FistGM " src=".github/Fundo.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
