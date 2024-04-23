@@ -60,6 +60,7 @@ LEMBRANDO QUE EXISTE VÁRIOS TIPOS DE FORMAS DE ALINHAR ELEMENTOS NO CSS, VOU LI
 
 #container-1 {
   width: 360px;
+  max-width: 588px;
   margin: 56px auto 0px;
   padding: 24px;
 }
